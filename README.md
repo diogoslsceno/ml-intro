@@ -1,21 +1,33 @@
-````markdown
-# Introdução à Machine Learning
+# 🤖 Introdução à Machine Learning
 
-Repositório com os notebooks e exercícios práticos desenvolvidos ao longo do curso de Introdução à Machine Learning. O conteúdo cobre desde os fundamentos do aprendizado supervisionado e não supervisionado até redes neurais e Processamento de Linguagem Natural (PLN), utilizando Python, scikit-learn, TensorFlow/Keras e NLTK.
+Repositório com os notebooks e exercícios práticos desenvolvidos ao longo do curso de Introdução à Machine Learning. Da regressão linear até redes neurais e PLN, tudo em Python 🐍, com scikit-learn, TensorFlow/Keras e NLTK.
 
-## Tópicos abordados
+## 📑 Sumário
 
-- Fundamentos de Machine Learning, aprendizado supervisionado x não supervisionado
-- Regressão linear simples e múltipla
-- Classificação binária e multiclasses
-- K-Nearest Neighbors (KNN)
-- Árvores de Decisão
-- Clusterização, K-means, métodos hierárquicos e não hierárquicos
-- Overfitting, Underfitting e Tradeoff Viés/Variância
-- Redes Neurais, Perceptron, MLP e Deep Learning com TensorFlow/Keras
-- Processamento de Linguagem Natural, tokenização, stopwords e TF-IDF
+- [Tópicos abordados](#tópicos-abordados)
+- [Tecnologias utilizadas](#tecnologias-utilizadas)
+- [Conteúdo do curso](#conteúdo-do-curso)
+- [Requisitos de versão](#requisitos-de-versão)
+- [Como executar](#como-executar)
+- [Configuração do NLTK](#configuração-do-nltk)
+- [Verificação das versões](#verificação-das-versões)
+- [Bibliotecas principais utilizadas](#bibliotecas-principais-utilizadas)
+- [Observações](#observações)
+- [Estrutura geral](#estrutura-geral)
 
-## Tecnologias utilizadas
+## 📚 Tópicos abordados
+
+- ✅ Fundamentos de Machine Learning, aprendizado supervisionado x não supervisionado
+- ✅ Regressão linear simples e múltipla
+- ✅ Classificação binária e multiclasses
+- ✅ K-Nearest Neighbors (KNN)
+- ✅ Árvores de Decisão
+- ✅ Clusterização, K-means, métodos hierárquicos e não hierárquicos
+- ✅ Overfitting, Underfitting e Tradeoff Viés/Variância
+- ✅ Redes Neurais, Perceptron, MLP e Deep Learning com TensorFlow/Keras
+- ✅ Processamento de Linguagem Natural, tokenização, stopwords e TF-IDF
+
+## 🛠️ Tecnologias utilizadas
 
 - **Python 3.10**
 - **scikit-learn** (regressão, classificação, clustering e redes neurais)
@@ -26,10 +38,10 @@ Repositório com os notebooks e exercícios práticos desenvolvidos ao longo do 
 - **Matplotlib** (visualização de dados)
 - **Jupyter Notebook** (desenvolvimento dos notebooks)
 
-## Conteúdo do curso
+## 🗂️ Conteúdo do curso
 
 | Pasta | Tópico | Descrição |
-| ------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| --- | --- | --- |
 | `Oficina_ML/` | Regressão Linear Múltipla | Previsão de preço de carros usados com `LinearRegression`, incluindo tratamento de variáveis categóricas e separação treino/teste. |
 | `MachineLearningDell/` | KNN (K-Nearest Neighbors) | Cálculo manual de distância euclidiana, classificação de frutas (`KNeighborsClassifier`) e regressão (`KNeighborsRegressor`) com o dataset Boston. |
 | `DecisionsTrees/` | Árvores de Decisão | Classificação (Iris) e regressão (Boston) com `DecisionTreeClassifier`/`DecisionTreeRegressor`, controle de `max_depth` para evitar overfitting e análise de `feature_importances_`. |
@@ -38,10 +50,10 @@ Repositório com os notebooks e exercícios práticos desenvolvidos ao longo do 
 | `1-Tensorflow/` | Redes Neurais com TensorFlow/Keras | Classificação de imagens do dataset Fashion MNIST, com normalização, construção de rede sequencial (`Flatten`, `Dense`, `ReLU`, `Softmax`) e avaliação de acurácia. |
 | `aula5.3/` | Processamento de Linguagem Natural (PLN) | Tokenização e remoção de stopwords com NLTK, e cálculo de relevância de termos com `TfidfVectorizer` (TF-IDF). |
 
-## Requisitos de versão
+## 🧩 Requisitos de versão
 
 | Componente | Versão |
-| -------------------- | :----: |
+| --- | :---: |
 | **Python** | **3.10.x** |
 | **NumPy** | **1.23.5** |
 | **SciPy** | **1.10.1** |
@@ -55,19 +67,24 @@ Repositório com os notebooks e exercícios práticos desenvolvidos ao longo do 
 | **ipykernel** | compatível com Python 3.10 |
 | **pip** | versão atual |
 
-## Ambiente virtual
+## 🚀 Como executar
+
+### 1️⃣ Clonar o repositório
+
+```bash
+git clone <url-do-repositorio>
+cd <pasta-do-projeto>
+```
+
+### 2️⃣ Criar o ambiente virtual
 
 O projeto utiliza um ambiente virtual Python (`.venv`) para manter as dependências isoladas do restante do sistema.
 
-### Criar o ambiente virtual
-
-No PowerShell:
-
 ```powershell
 py -3.10 -m venv .venv
-````
+```
 
-### Ativar o ambiente virtual
+### 3️⃣ Ativar o ambiente virtual
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
@@ -75,72 +92,25 @@ py -3.10 -m venv .venv
 
 Após a ativação, o terminal deverá apresentar `(.venv)` no início da linha.
 
-## Instalação
-
-Com o ambiente virtual ativado:
+### 4️⃣ Atualizar o pip
 
 ```powershell
 python -m pip install --upgrade pip
 ```
 
-Instale as dependências:
+### 5️⃣ Instalar as dependências
 
 ```powershell
 pip install numpy==1.23.5 scipy==1.10.1 pandas==1.5.3 matplotlib==3.7.2 scikit-learn==1.1.3 tensorflow==2.13.1 nltk==3.10.2 jupyter notebook ipykernel
 ```
 
-## Verificação das versões
-
-Para verificar se as principais bibliotecas foram instaladas corretamente:
-
-```powershell
-python -c "import sys,numpy,pandas,scipy,sklearn,tensorflow,nltk; print('Python:',sys.version.split()[0]); print('NumPy:',numpy.__version__); print('Pandas:',pandas.__version__); print('SciPy:',scipy.__version__); print('Scikit-learn:',sklearn.__version__); print('TensorFlow:',tensorflow.__version__); print('Keras:',tensorflow.keras.__version__); print('NLTK:',nltk.__version__)"
-```
-
-O ambiente deverá apresentar versões compatíveis com as especificadas neste README.
-
-## Configuração do NLTK
-
-O NLTK utiliza alguns recursos adicionais para processamento de linguagem natural. Eles devem ser baixados após a instalação da biblioteca.
-
-No Jupyter Notebook:
-
-```python
-import nltk
-
-nltk.download('stopwords')
-nltk.download('punkt')
-nltk.download('punkt_tab')
-```
-
-Os recursos utilizados nos notebooks incluem:
-
-* `stopwords`, identificação de palavras sem relevância semântica para determinadas tarefas;
-* `punkt`, tokenização de textos;
-* `punkt_tab`, recurso utilizado pelas versões atuais do NLTK na tokenização.
-
-## TensorFlow e Keras
-
-Os notebooks utilizam o Keras integrado ao TensorFlow:
-
-```python
-import tensorflow as tf
-from tensorflow import keras
-```
-
-Não é necessário instalar o Keras separadamente.
-
-O TensorFlow é utilizado principalmente na construção e treinamento de redes neurais, incluindo a classificação do dataset Fashion MNIST.
-
-## Jupyter Notebook
-
-Para iniciar o ambiente:
+### 6️⃣ Iniciar o Jupyter Notebook
 
 ```powershell
 jupyter notebook
 ```
 
-Depois, navegue até a pasta do notebook desejado e execute as células.
+Navegue até a pasta do tópico desejado e execute as células.
 
 Para verificar se o Jupyter está utilizando o ambiente virtual correto, execute dentro do notebook:
 
@@ -157,9 +127,37 @@ O caminho do Python deverá apontar para:
 .venv\Scripts\python.exe
 ```
 
-## Bibliotecas principais utilizadas
+## 🗣️ Configuração do NLTK
 
-### NumPy
+O NLTK utiliza alguns recursos adicionais para processamento de linguagem natural. Eles devem ser baixados após a instalação da biblioteca, no próprio Jupyter Notebook:
+
+```python
+import nltk
+
+nltk.download('stopwords')
+nltk.download('punkt')
+nltk.download('punkt_tab')
+```
+
+Os recursos utilizados nos notebooks incluem:
+
+- `stopwords`: identificação de palavras sem relevância semântica para determinadas tarefas.
+- `punkt`: tokenização de textos.
+- `punkt_tab`: recurso utilizado pelas versões atuais do NLTK na tokenização.
+
+## 🔍 Verificação das versões
+
+Para verificar se as principais bibliotecas foram instaladas corretamente:
+
+```powershell
+python -c "import sys,numpy,pandas,scipy,sklearn,tensorflow,nltk; print('Python:',sys.version.split()[0]); print('NumPy:',numpy.__version__); print('Pandas:',pandas.__version__); print('SciPy:',scipy.__version__); print('Scikit-learn:',sklearn.__version__); print('TensorFlow:',tensorflow.__version__); print('Keras:',tensorflow.keras.__version__); print('NLTK:',nltk.__version__)"
+```
+
+O ambiente deverá apresentar versões compatíveis com as especificadas na seção [Requisitos de versão](#requisitos-de-versão).
+
+## 📦 Bibliotecas principais utilizadas
+
+### 🔢 NumPy
 
 Utilizado para manipulação de arrays, operações matemáticas e processamento numérico.
 
@@ -167,7 +165,7 @@ Utilizado para manipulação de arrays, operações matemáticas e processamento
 import numpy as np
 ```
 
-### Pandas
+### 🐼 Pandas
 
 Utilizado para manipulação de dados e criação de DataFrames.
 
@@ -175,7 +173,7 @@ Utilizado para manipulação de dados e criação de DataFrames.
 import pandas as pd
 ```
 
-### Matplotlib
+### 📊 Matplotlib
 
 Utilizado para visualização gráfica dos dados e resultados.
 
@@ -183,18 +181,18 @@ Utilizado para visualização gráfica dos dados e resultados.
 import matplotlib.pyplot as plt
 ```
 
-### Scikit-learn
+### 🧠 Scikit-learn
 
 Utilizado em diferentes etapas do curso, incluindo:
 
-* Regressão Linear
-* KNN
-* Árvores de Decisão
-* K-means
-* MLP
-* Pré-processamento
-* Separação entre treino e teste
-* Métricas de avaliação
+- Regressão Linear
+- KNN
+- Árvores de Decisão
+- K-means
+- MLP
+- Pré-processamento
+- Separação entre treino e teste
+- Métricas de avaliação
 
 Exemplo:
 
@@ -202,44 +200,42 @@ Exemplo:
 from sklearn.feature_extraction.text import TfidfVectorizer
 ```
 
-### TensorFlow / Keras
+### 🔶 TensorFlow / Keras
 
-Utilizado na construção e treinamento de redes neurais.
+Utilizado na construção e treinamento de redes neurais. Não é necessário instalar o Keras separadamente, ele já vem integrado ao TensorFlow.
 
 ```python
 import tensorflow as tf
 from tensorflow import keras
 ```
 
-### NLTK
+O TensorFlow é utilizado principalmente na construção e treinamento de redes neurais, incluindo a classificação do dataset Fashion MNIST.
+
+### 💬 NLTK
 
 Utilizado no Processamento de Linguagem Natural.
 
 ```python
 import nltk
-```
 
-Exemplos de recursos utilizados:
-
-```python
 nltk.download('stopwords')
 nltk.download('punkt')
 nltk.download('punkt_tab')
 ```
 
-### SciPy
+### 🧮 SciPy
 
 Utilizado como biblioteca de computação científica e como dependência de ferramentas utilizadas no curso.
 
-## Observações
+## ⚠️ Observações
 
-### TensorFlow no Windows
+### 🖥️ TensorFlow no Windows
 
 O TensorFlow utilizado neste projeto funciona em CPU no Windows nativamente. O aviso relacionado à ausência de suporte à GPU em versões recentes do TensorFlow no Windows não impede a execução dos notebooks.
 
-### API atual do Scikit-learn
+### 🔄 API atual do Scikit-learn
 
-Para obter os nomes das características utilizadas pelo `TfidfVectorizer`, utilize:
+Para obter os nomes das características utilizadas pelo `TfidfVectorizer`, utilize a API atual:
 
 ```python
 nomes = tf_idf.get_feature_names_out()
@@ -257,53 +253,7 @@ Para converter uma matriz esparsa em uma matriz NumPy:
 vetor = vetor.toarray()
 ```
 
-## Como executar
-
-1. Clone o repositório:
-
-```bash
-git clone <url-do-repositorio>
-```
-
-2. Entre na pasta do projeto:
-
-```bash
-cd <pasta-do-projeto>
-```
-
-3. Crie o ambiente virtual:
-
-```powershell
-py -3.10 -m venv .venv
-```
-
-4. Ative o ambiente:
-
-```powershell
-.\.venv\Scripts\Activate.ps1
-```
-
-5. Atualize o `pip`:
-
-```powershell
-python -m pip install --upgrade pip
-```
-
-6. Instale as dependências:
-
-```powershell
-pip install numpy==1.23.5 scipy==1.10.1 pandas==1.5.3 matplotlib==3.7.2 scikit-learn==1.1.3 tensorflow==2.13.1 nltk==3.10.2 jupyter notebook ipykernel
-```
-
-7. Inicie o Jupyter Notebook:
-
-```powershell
-jupyter notebook
-```
-
-8. Navegue até a pasta do tópico desejado e execute os notebooks.
-
-## Estrutura geral
+## 🌳 Estrutura geral
 
 ```text
 IntroducaoMachineLearningDell/
@@ -321,11 +271,8 @@ IntroducaoMachineLearningDell/
 └── README.md
 ```
 
-> O diretório `.venv/` deve permanecer apenas no ambiente local e não deve ser enviado para o GitHub.
+> 🚫 O diretório `.venv/` deve permanecer apenas no ambiente local e não deve ser enviado para o GitHub.
 
-## Projeto
+---
 
 Projeto desenvolvido como parte do curso de Introdução à Machine Learning, reunindo exercícios, oficinas e notebooks práticos desenvolvidos ao longo das aulas.
-
-```
-```
