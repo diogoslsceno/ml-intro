@@ -3,6 +3,11 @@
 venv/
 env/
 
+# Variáveis de ambiente e segredos
+.env
+.env.*
+!.env.example
+
 # Jupyter
 .ipynb_checkpoints/
 
